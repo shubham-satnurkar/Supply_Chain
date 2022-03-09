@@ -1,0 +1,51 @@
+.container{max-width: 1170px;}
+
+
+// Font Face
+@font-face {
+    font-family:SourceSansPro-Bold;
+    src: url(../fonts/SourceSansPro-Bold.ttf);
+}
+@font-face {
+    font-family:SourceSansPro-SemiBold;
+    src: url(../fonts/SourceSansPro-SemiBold.ttf);
+}
+@font-face {
+    font-family:SourceSansPro-Regular;
+    src: url(../fonts/SourceSansPro-Regular.ttf);
+}
+@font-face {
+    font-family:SourceSansPro-Light;
+    src: url(../fonts/SourceSansPro-Light.ttf);
+}
+@font-face {
+    font-family:SourceSansPro-Black;
+    src: url(../fonts/SourceSansPro-Black.ttf);
+}
+
+@mixin  flexbox {
+    display: flex;flex-wrap: wrap;
+    justify-content: center; align-items: center;
+}
+
+@mixin btns{
+    height: 40px;border: 1px solid $btn-color;
+    font-size: 1rem; font-family: $sans-bold;
+    width: auto; padding: 6px 30px;box-shadow: 0 2px 3px rgba($btn-color, .6);
+   color: $btn-color;
+    &:hover{box-shadow: 0 2px 3px rgba($btn-color, .6); background-color: $btn-color;color: $white;}
+    &:focus{
+        outline: none;box-shadow: 0 0 5px rgba($btn-color, .6)
+    }
+    .fa-solid{font-size: .8rem;}
+}
+
+@mixin sub-hedings{
+    font-size: 2.625rem; font-family: $sans-bold;
+    line-height: 1.2;color: $sub-head-color;
+    text-align: center; margin-bottom: 35px;
+}
+@mixin para-text {
+    font-size: 1rem;font-family: $sans-regular;
+    color: $txt-color; margin-bottom: 20px;
+}

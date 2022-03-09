@@ -1,0 +1,9 @@
+
+
+.slick-next{
+    right: 100px;background-color: red;
+    color: blue;
+}
+.slick-prev{
+    left: 100px;background-color: red;z-index: 10;
+}
