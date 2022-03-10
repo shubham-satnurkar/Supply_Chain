@@ -16,6 +16,7 @@
             font-family: $sans-bold;color: $logo-color;
         }
         &-nav{
+            position: relative;
             .nav-item{
                 margin: 0 5px;
                 .nav-link{
@@ -24,9 +25,37 @@
                     color: $logo-color;padding: 10px 15px;
 
                     &:hover{color: $btn-color}
+
+                    &.close{display: none;}
+                    &.search{.fa-solid{margin-top: 3px;}}
                 }
                 &.active{
                     .nav-link{color: $btn-color}
+                }
+                
+                &.show{
+                    .search{display: none;}
+                    .close{
+                        display: block;
+                        .fa-solid{color: $logo-color;font-size: 1.125rem;margin-top: 3px;}
+                    }
+                }
+                .form{
+                    position: absolute;left: 20px;bottom: -90px;
+                    width: 350px; padding: 10px;background-color: $white;
+                    z-index: 100;;
+                    box-shadow: 0 0 5px rgba($black, .1);
+                    display: none;
+                    .form-control{
+                        width: 100%;padding: 5px 40px 5px 10px;overflow: hidden;
+                        text-overflow: ellipsis; height: 50px;box-shadow: none;
+                    }
+                    
+                    .btn{
+                        position: absolute;right: 15px;top: 17px;padding: px;
+                        box-shadow: none; background-color: $white;
+                        &:hover{color: $btn-color}
+                    }
                 }
             }
         }
@@ -268,7 +297,7 @@
         
         .card{
             border-radius: 22px;overflow: hidden;
-            border: none; 
+            border: none; background-color: transparent;
             .img-fluid{width: 90%;}
         }
     }
@@ -340,18 +369,28 @@
 
 // Our Happy Customer SEction Start
 .customer-slider{
-    padding: 100px 0;
+    padding: 100px 0;position: relative;
+    &>.img-fluid{
+        width: 50%;position: absolute;
+        top: 100px;left: -250px;
+    }
     .heading_sec{
         margin-bottom: 100px;
         .sub-heading{@include sub-hedings;}
     }
     .carousel{
         .card{
-            text-align: center; padding: 20px 30px;
+            text-align: center; padding: 20px 30px 0; 
+            margin: 0 10px;border-radius:10px;border: none;
+            box-shadow: 0 0 5px rgba($black, .1);
+            background-color: rgba($white, .6);
             .profile{
                 width: 150px;height: 150px;
                 border-radius: 10px;overflow: hidden;
                 margin:-100px auto 20px;
+            }
+            .quote{
+                position: absolute;right: 50px;top: 50px;
             }
             &-body{
                 width: 60%; margin: auto;
@@ -365,8 +404,164 @@
                 }
                 .sub-title{font-size: .75rem;font-family: $sans-regular;color: $txt-color;}
             }
+            &.slick-current{
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba($black, .3);
+            }
         }
+        
         .slick-list{overflow: unset;}
+        .slick-next{
+            right: 100px;background-color: $white;
+            width: 35px; height: 35px;z-index: 10;
+            border-radius: 50%; box-shadow: 0 0 10px rgba($btn-color, .2);
+            &::before{
+                content: '\f105';
+                font-family: "Font Awesome 6 Free";
+                font-weight: 900;
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-font-smoothing: antialiased;
+                display: var(--fa-display,inline-block);
+                font-style: normal; font-variant: normal;
+                line-height: 1; text-rendering: auto;
+                font-size: 1rem;color: $btn-color;
+            }
+        }
+        .slick-prev{
+            left: 100px;background-color: $white;
+            width: 35px; height: 35px;
+            border-radius: 50%; box-shadow: 0 0 10px rgba($btn-color, .2);
+            z-index: 10;
+            &::before{
+                content: "\f104";
+                font-family: "Font Awesome 6 Free";
+                font-weight: 900;
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-font-smoothing: antialiased;
+                display: var(--fa-display,inline-block);
+                font-style: normal; font-variant: normal;
+                line-height: 1;text-rendering: auto;
+                font-size: 1rem;color: $btn-color;
+            }
+        }
+        &.slick-dotted.slick-slider{
+            .slick-dots{display: none!important;}
+        }
     }
+    .progress {
+        display: block; width: 100%; height: 5px;
+        border-radius: 4px; overflow: hidden;
+        background-color: rgba(#00C853, .2);
+        background-image: linear-gradient(to right, $btn-color, $btn-color);
+        background-repeat: no-repeat;background-size: 0 100%;
+        transition: background-size .4s ease-in-out;
+
+        .sr-only {
+            position: absolute; width: 2px;height: 2px;
+            padding: 0;margin: -1px; overflow: hidden;
+            clip: rect(0,0,0,0);border: 0;
+          }
+      }
+    
 }
 // Our Happy Customer SEction End
+
+// Footer Section Start
+.footer{
+    background-color: $foot-bg-color;
+    padding: 50px 0 0;
+
+    // Link and Info Blocks
+    .block{
+        margin-bottom: 20px;
+        .foot-heading{
+            font-size: 1.125rem;color: $white;
+            font-family: $sans-semibold;margin-bottom: 20px;
+        }
+        .list-unstyled{
+            .list-item{
+                margin-bottom: 20px;
+                .foot-link{
+                    font-size: 1rem;color: rgba($white, .8);
+                    padding: 10px 0;
+                }
+            }
+        }
+
+        .form{
+            width: 95%; position: relative;
+            border-radius: 5px;
+            .form-control{
+                height: 45px; border-radius: 5px 0 0 5px;
+                border:1px solid $txt-color;
+                border-right: none; 
+            }
+            .btn{
+                @include btns; height: 45px;color: $white;
+                border-radius:  0 5px 5px 0 ;
+                box-shadow: unset;
+            }
+            .error{
+                position: absolute;bottom: -25px;
+                font-size: .875rem;
+            }
+        }
+
+        .call{
+            @include flexbox;color:$white;align-items: center;
+            gap: 10px; margin-top: 37px; cursor: pointer;
+            .foot-heading{
+                display: flex;flex-direction: column;gap:5px;
+                small{font-family: $sans-regular;}
+            }
+            .fa-solid{
+                background-color: $white;font-size: 1.5rem;
+                color: $btn-color; padding: 12px;border-radius: 50%;
+            }
+        }
+        
+        .iocns{
+            @include flexbox; justify-content: flex-start;
+            gap: 10px;
+            .social-links{
+                width: 40px;height: 40px;color: $white;
+                text-decoration: none;border-radius: 5px;
+                @include flexbox;
+                background-color: rgba($white, .2);
+                .fa-brands{font-size: 1.25rem;}
+
+                &:hover{
+                    &:first-child{background-color:$fb-color;}
+                    &:nth-child(2){background-color:$gplus-color;}
+                    &:last-child{background-color:$twit-color;}
+                }
+                
+            }
+        }
+
+        &_4{
+            .list-unstyled{
+                .list-item{
+                    margin-bottom: 0;
+                    .btn{
+                        width: auto;padding: 3px 0;
+                        box-shadow: none;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    // Copyright Text
+    .copyright{
+        border-top: 1px solid rgba($white, .2);
+        padding: 22px 0;;
+        &-text{
+            text-align: center;margin: 0;;
+            font-size: .875rem; font-family: $sans-regular;
+            color: rgba($white, .6);
+        }
+    }
+}
+// Footer Section End

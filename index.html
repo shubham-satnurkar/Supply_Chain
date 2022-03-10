@@ -39,10 +39,17 @@
 
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
               <ul class="navbar-nav mx-auto">
-                <li class="nav-item ">
-                  <a class="nav-link" href="javascript:void(0)">
+                <li class="nav-item " id="search-bar">
+                  <a class="nav-link search" id="search" href="javascript:void(0)">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </a>
+                  <a href="javascript:void(0)" class="nav-link close" id="close">
+                    <i class="fa-solid fa-xmark"></i>
+                  </a>
+                  <form class="form" id="srcForm">
+                    <input type="search" class="form-control" placeholder="Search Here...">
+                    <button class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  </form>
                 </li>
                 <li class="nav-item active">
                   <a class="nav-link" href="javascript:void(0)">Home</a>
@@ -354,55 +361,76 @@
 
   <!-- Our Happy Customer SEction Start -->
   <section class="customer-slider overflow-hidden">
+    <img src="img/slider-bg.png" alt="img" class="img-fluid">
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 heading_sec">
           <h2 class="sub-heading">Our Happy Customer</h2>
         </div>
-        <div class="col-8 mx-auto carousel">
+        <div class="col-md-8 mx-auto carousel">
+
           <div class="card">
             <div class="profile">
               <img src="img/profile.png" class="card-img-top" alt="profile-img">
             </div>
+            <div class="quote">
+              <img src="img/quote.svg" alt="quote-img">
+            </div>
             <div class="card-body">
               <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s
               </p>
               <h4 class="card-title">Jane Doe</h4>
               <h6 class="sub-title">Founder of FML</h6>
             </div>
           </div>
+
           <div class="card">
             <div class="profile">
               <img src="img/profile.png" class="card-img-top" alt="profile-img">
             </div>
+            <div class="quote">
+              <img src="img/quote.svg" alt="quote-img">
+            </div>
             <div class="card-body">
               <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s
               </p>
               <h4 class="card-title">Jane Doe</h4>
               <h6 class="sub-title">Founder of FML</h6>
             </div>
           </div>
+
           <div class="card">
             <div class="profile">
               <img src="img/profile.png" class="card-img-top" alt="profile-img">
             </div>
+            <div class="quote">
+              <img src="img/quote.svg" alt="quote-img">
+            </div>
             <div class="card-body">
               <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s
               </p>
               <h4 class="card-title">Jane Doe</h4>
               <h6 class="sub-title">Founder of FML</h6>
             </div>
           </div>
+
           <div class="card">
             <div class="profile">
               <img src="img/profile.png" class="card-img-top" alt="profile-img">
             </div>
+            <div class="quote">
+              <img src="img/quote.svg" alt="quote-img">
+            </div>
             <div class="card-body">
               <p class="card-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s
               </p>
               <h4 class="card-title">Jane Doe</h4>
               <h6 class="sub-title">Founder of FML</h6>
@@ -410,10 +438,113 @@
           </div>
 
         </div>
+        <div class="col-md-7 mx-auto">
+          <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+            <span class="slider__label sr-only"></span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
   <!-- Our Happy Customer SEction End -->
+
+
+  <!-- Footer Section Start -->
+  <footer class="footer">
+    <div class="container">
+      <!-- First Row -->
+      <div class="row">
+        <!-- Genral Links -->
+        <div class="col-lg-3 col-md-4 col-sm-6 block block_1">
+          <h6 class="foot-heading">General</h6>
+          <ul class="list-unstyled">
+            <li class="list-item"><a href="javascript:void(0)" class="foot-link">About</a></li>
+            <li class="list-item"><a href="javascript:void(0)" class="foot-link">Contact Us</a></li>
+            <li class="list-item"><a href="javascript:void(0)" class="foot-link">How We Work</a></li>
+            <li class="list-item"><a href="javascript:void(0)" class="foot-link">Why Us</a></li>
+            <li class="list-item"><a href="javascript:void(0)" class="foot-link">Become a Partner</a></li>
+          </ul>
+        </div>
+        <!-- Support Links -->
+        <div class="col-lg-3 col-md-4 col-sm-6 block block_2">
+          <h6 class="foot-heading">Support</h6>
+          <ul class="list-unstyled">
+            <li class="list-item"><a href="javascript:void(0)" class="foot-link">Help</a></li>
+            <li class="list-item"><a href="javascript:void(0)" class="foot-link">FAQ</a></li>
+            <li class="list-item"><a href="javascript:void(0)" class="foot-link">Payment & Refunds</a></li>
+            <li class="list-item"><a href="javascript:void(0)" class="foot-link">Product Guarantee</a></li>
+            <li class="list-item"><a href="javascript:void(0)" class="foot-link">Product Complaints & Feedback</a></li>
+          </ul>
+        </div>
+        <!-- Legal Links -->
+        <div class="col-lg-3 col-md-4 col-sm-6 block block_3">
+          <h6 class="foot-heading">Legal</h6>
+          <ul class="list-unstyled">
+            <li class="list-item"><a href="javascript:void(0)" class="foot-link">Terms & Condition</a></li>
+            <li class="list-item"><a href="javascript:void(0)" class="foot-link">License</a></li>
+            <li class="list-item"><a href="javascript:void(0)" class="foot-link">Code of Conduct</a></li>
+            <li class="list-item"><a href="javascript:void(0)" class="foot-link">Disclaimer</a></li>
+            <li class="list-item"><a href="javascript:void(0)" class="foot-link">Privacy & Cookies</a></li>
+          </ul>
+        </div>
+        <!-- Download App -->
+        <div class="col-lg-3 col-md-4 col-sm-6 block block_4">
+          <h6 class="foot-heading">Download App</h6>
+          <ul class="list-unstyled">
+            <li class="list-item">
+              <a href="javascript:void(0)" class="btn">
+                <img src="img/play-store.svg" alt="play-store" class="img-fluid">
+              </a>
+            </li>
+            <li class="list-item">
+              <a href="javascript:void(0)" class="btn">
+                <img src="img/app-store.svg" alt="app-store" class="img-fluid">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Second Row -->
+      <div class="row mb-2">
+        <!-- Subscribe To NewsLetter -->
+        <div class="col-md-6 block block_5">
+          <h6 class="foot-heading">Subscribe To Newsletter</h6>
+          <form class="form d-flex" onsubmit="validateForm()" novalidate>
+            <!-- <div class="form-group"> -->
+            <input type="email" class="form-control" id="email" onblur="validate()" placeholder="Enter email addresss">
+            <button type="submit" id="sub-btn" class="btn btn-primary">Subscribe</button>
+            <!-- </div> -->
+            <span id="error" class="error"></span>
+          </form>
+        </div>
+        <!-- Call us -->
+        <div class="col-lg-3 col-md-4 col-sm-6 block block_6">
+          <div class="call">
+            <p><i class="fa-solid fa-phone"></i></p>
+            <h6 class="foot-heading">
+              <small>Call Us</small>
+              + (715) 123-4567
+            </h6>
+          </div>
+        </div>
+        <!-- Follow us -->
+        <div class="col-lg-3 col-md-4 col-sm-6 block block_7">
+          <h6 class="foot-heading">Follow Us</h6>
+          <div class="iocns">
+            <a href="javascript:void(0)" class="social-links"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="javascript:void(0)" class="social-links"><i class="fa-brands fa-google-plus-g"></i></a>
+            <a href="javascript:void(0)" class="social-links"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Copyright Text -->
+    <div class="w-100 copyright">
+      <p class="copyright-text">Copyright © 2021 | All Rights Reserved</p>
+    </div>
+  </footer>
+  <!-- Footer Section End -->
 
 
 
