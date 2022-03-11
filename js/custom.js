@@ -9,6 +9,13 @@ $(document).ready(function () {
         }
     });
 
+    $(".navbar-toggler").click(function(){
+        $(".header").toggleClass("bg-color");
+    })
+
+    
+
+
     // Customer Slider Progress Bar
     var $carousel = $('.carousel');
     var $progressBar = $('.progress');
@@ -52,19 +59,22 @@ $(document).ready(function () {
 
             }
         }, {
-            breakpoint: 480,
+            breakpoint: 576,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: true,
                 infinite: true,
                 autoplay: true,
-                autoplaySpeed: 2000,
+                autoplaySpeed: 1000,
+                centerMode : false,
             }
         }]
     });
 
 
+
+    
     // Onclick Search Icon Search bar Show with close button....
     let $search = $("#search");//nav-link search icon
     let $close = $("#close");//nav-link close icon display none 

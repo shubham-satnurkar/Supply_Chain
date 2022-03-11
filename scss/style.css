@@ -64,6 +64,15 @@
   src: url(../fonts/SourceSansPro-Black.ttf);
 }
 
+.sub-heading {
+  font-size: 2.625rem;
+  font-family: SourceSansPro-Bold;
+  line-height: 1.2;
+  color: #1E2E2E;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
 .header {
   padding: 20px 0;
 }
@@ -278,7 +287,7 @@
 
 .hero-heading {
   overflow: hidden;
-  padding: 80px 0 20px;
+  padding: 80px 0 50px;
   position: relative;
   z-index: 1000;
 }
@@ -351,8 +360,6 @@
   position: relative;
   left: 60px;
   top: -10px;
-  -webkit-transform: rotate(deg);
-          transform: rotate(deg);
 }
 
 .hero-heading .bg-img .overlay-content {
@@ -482,13 +489,8 @@
   left: -39%;
 }
 
-.work .sub-heading {
-  font-size: 2.625rem;
-  font-family: SourceSansPro-Bold;
-  line-height: 1.2;
-  color: #1E2E2E;
-  text-align: center;
-  margin-bottom: 35px;
+.work .cards-sec {
+  margin-bottom: 20px;
 }
 
 .work .cards-sec .card {
@@ -585,12 +587,6 @@
 }
 
 .choose .heading_sec .sub-heading {
-  font-size: 2.625rem;
-  font-family: SourceSansPro-Bold;
-  line-height: 1.2;
-  color: #1E2E2E;
-  text-align: center;
-  margin-bottom: 35px;
   text-align: left;
 }
 
@@ -654,7 +650,7 @@
 }
 
 .choose .circle-card .card .card-img-overlay .row {
-  gap: 40px;
+  gap: 30px;
 }
 
 .choose .circle-card .card .card-img-overlay .sec {
@@ -676,7 +672,6 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  row-gap: 50px;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 }
@@ -730,12 +725,6 @@
 }
 
 .food-product .heading_sec .sub-heading {
-  font-size: 2.625rem;
-  font-family: SourceSansPro-Bold;
-  line-height: 1.2;
-  color: #1E2E2E;
-  text-align: center;
-  margin-bottom: 35px;
   line-height: 1.4;
 }
 
@@ -936,15 +925,6 @@
   margin-bottom: 100px;
 }
 
-.customer-slider .heading_sec .sub-heading {
-  font-size: 2.625rem;
-  font-family: SourceSansPro-Bold;
-  line-height: 1.2;
-  color: #1E2E2E;
-  text-align: center;
-  margin-bottom: 35px;
-}
-
 .customer-slider .carousel .card {
   text-align: center;
   padding: 20px 30px 0;
@@ -971,7 +951,7 @@
 }
 
 .customer-slider .carousel .card-body {
-  width: 60%;
+  width: 70%;
   margin: auto;
 }
 
@@ -1207,7 +1187,7 @@
   border-radius: 50%;
 }
 
-.footer .block .iocns {
+.footer .block .icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1225,7 +1205,7 @@
   gap: 10px;
 }
 
-.footer .block .iocns .social-links {
+.footer .block .icons .social-links {
   width: 40px;
   height: 40px;
   color: #fff;
@@ -1245,19 +1225,19 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.footer .block .iocns .social-links .fa-brands {
+.footer .block .icons .social-links .fa-brands {
   font-size: 1.25rem;
 }
 
-.footer .block .iocns .social-links:hover:first-child {
+.footer .block .icons .social-links:hover:first-child {
   background-color: #3B5998;
 }
 
-.footer .block .iocns .social-links:hover:nth-child(2) {
+.footer .block .icons .social-links:hover:nth-child(2) {
   background-color: #DD4B39;
 }
 
-.footer .block .iocns .social-links:hover:last-child {
+.footer .block .icons .social-links:hover:last-child {
   background-color: #1DA1F2;
 }
 
@@ -1283,5 +1263,659 @@
   font-size: .875rem;
   font-family: SourceSansPro-Regular;
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 1280px) {
+  .hero-heading > .img-fluid {
+    top: -115px;
+    right: -300px;
+    width: 70%;
+  }
+  .hero-heading .bg-img .img-fluid {
+    width: 100%;
+    left: 30px;
+  }
+  .hero-heading .bg-img .overlay-content .sec.quick {
+    right: 10px;
+  }
+  .hero-heading .bg-img .overlay-content .sec.app-btn {
+    left: -20px;
+  }
+  .choose .heading_sec {
+    padding-left: 70px;
+  }
+  .choose .circle-card .card .card-img-overlay {
+    padding: 10px 30px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .hero-heading > .img-fluid {
+    top: -65px;
+    right: -250px;
+    width: 72%;
+  }
+  .hero-heading .bg-img .img-fluid {
+    width: 95%;
+    left: 30px;
+  }
+  .hero-heading .bg-img .overlay-content .sec.quick {
+    right: 20px;
+    bottom: -95px;
+  }
+  .hero-heading .bg-img .overlay-content .sec.app-btn {
+    left: -20px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .hero-heading > .img-fluid {
+    top: -90px;
+    right: -200px;
+    width: 75%;
+  }
+  .hero-heading .bg-img .img-fluid {
+    width: 95%;
+    left: 30px;
+  }
+  .hero-heading .bg-img .overlay-content .sec.quick {
+    right: 10px;
+  }
+  .hero-heading .bg-img .overlay-content .sec.app-btn {
+    left: -20px;
+  }
+  .choose .heading_sec {
+    padding-left: 16px;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .circle {
+    width: 130px;
+    height: 130px;
+    margin-right: 35px;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .circle-content {
+    width: 135px;
+    margin: 25px;
+    padding: 5px;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .circle-content .content-title {
+    font-size: 2.5rem;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .circle-content .sub-title {
+    font-size: 1.125rem;
+    font-family: SourceSansPro-Regular;
+  }
+  .customer-slider .carousel .card-body {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .sub-heading {
+    font-size: 2.625rem;
+    font-family: SourceSansPro-Bold;
+    line-height: 1.2;
+    color: #1E2E2E;
+    text-align: center;
+    margin-bottom: 35px;
+    margin-bottom: 20px;
+  }
+  .header .navbar-nav .nav-item .form {
+    left: 100px;
+    bottom: 0;
+    top: 55px;
+    right: 0;
+    height: 70px;
+  }
+  .header .navbar-nav .nav-item.show .close {
+    float: left;
+  }
+  .hero-heading > .img-fluid {
+    top: -70px;
+    right: -250px;
+    width: 70%;
+  }
+  .hero-heading .heading_sec .head-title {
+    font-size: 3.5rem;
+  }
+  .hero-heading .bg-img .img-fluid {
+    width: 110%;
+    left: 10px;
+  }
+  .hero-heading .bg-img .overlay-content .sec {
+    padding: 5px 25px;
+  }
+  .hero-heading .bg-img .overlay-content .sec .link {
+    width: 40px;
+    height: 40px;
+  }
+  .hero-heading .bg-img .overlay-content .sec .link .fa-brands {
+    font-size: 1.125rem;
+  }
+  .hero-heading .bg-img .overlay-content .sec.quick {
+    right: 15px;
+    bottom: -60px;
+  }
+  .hero-heading .bg-img .overlay-content .sec.app-btn {
+    left: -50px;
+  }
+  .choose .heading_sec {
+    padding-left: 16px;
+  }
+  .choose .circle-card .card .card-img-overlay .row {
+    gap: 20px;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .circle {
+    width: 105px;
+    height: 105px;
+    margin-right: 35px;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .circle-content {
+    width: 110px;
+    margin: 14px;
+    padding: 5px;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .circle-content .content-title {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .circle-content .sub-title {
+    font-size: 1rem;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .info {
+    line-height: 1.4;
+    font-size: .875rem;
+    margin: 0 0 0 10px;
+  }
+  .customer-slider {
+    padding: 50px 0;
+  }
+  .customer-slider > .img-fluid {
+    width: 75%;
+  }
+  .customer-slider .carousel .card .quote img {
+    width: 77%;
+  }
+  .customer-slider .carousel .card .profile {
+    width: 130px;
+    height: 130px;
+    margin: -80px auto 20px;
+  }
+  .customer-slider .carousel .card-body {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sub-heading {
+    font-size: 2.625rem;
+    font-family: SourceSansPro-Bold;
+    line-height: 1.2;
+    color: #1E2E2E;
+    text-align: center;
+    margin-bottom: 35px;
+    margin-bottom: 25px;
+    font-size: 2.25rem;
+  }
+  .hero-heading {
+    padding: 100px 0 20px;
+  }
+  .hero-heading > .img-fluid {
+    top: -30px;
+    right: -220px;
+    width: 100%;
+  }
+  .hero-heading .heading_sec .head-title {
+    font-size: 3rem;
+  }
+  .hero-heading .bg-img .img-fluid {
+    width: 80%;
+    left: 0px;
+    margin: auto;
+  }
+  .hero-heading .bg-img .overlay-content .sec {
+    padding: 5px 25px;
+  }
+  .hero-heading .bg-img .overlay-content .sec .link {
+    width: 40px;
+    height: 40px;
+  }
+  .hero-heading .bg-img .overlay-content .sec .link .fa-brands {
+    font-size: 1.125rem;
+  }
+  .hero-heading .bg-img .overlay-content .sec.quick {
+    right: 100px;
+    bottom: -90px;
+  }
+  .hero-heading .bg-img .overlay-content .sec.app-btn {
+    left: 20px;
+  }
+  .work {
+    padding: 20px 0;
+  }
+  .choose {
+    padding: 20px 0;
+    overflow-x: hidden;
+  }
+  .choose .heading_sec {
+    padding-left: 16px;
+    margin-bottom: 30px;
+  }
+  .choose .circle-card .card {
+    border-radius: 30px;
+  }
+  .choose .circle-card .card .card-img-overlay {
+    padding: 15px 30px;
+  }
+  .choose .circle-card .card .card-img-overlay .row {
+    gap: 25px;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .circle {
+    width: 130px;
+    height: 130px;
+    margin-right: 35px;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .circle-content {
+    width: 130px;
+    margin: 24px;
+    padding: 5px;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .circle-content .content-title {
+    font-size: 2.375rem;
+    margin-bottom: 5px;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .circle-content .sub-title {
+    font-size: 1.125rem;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .info {
+    line-height: 1.5;
+    font-size: .9rem;
+    margin: 0 0 0 10px;
+  }
+  .food-product {
+    padding: 30px 0;
+  }
+  .food-product .pro-img .card .img-fluid {
+    margin: auto;
+  }
+  .customer-slider > .img-fluid {
+    width: 100%;
+    top: 30px;
+  }
+  .customer-slider .heading_sec {
+    margin-bottom: 70px;
+  }
+  .customer-slider .carousel .card .quote img {
+    width: 77%;
+  }
+  .customer-slider .carousel .card .profile {
+    width: 130px;
+    height: 130px;
+    margin: -80px auto 20px;
+  }
+  .customer-slider .carousel .card-body {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .sub-heading {
+    font-size: 2.625rem;
+    font-family: SourceSansPro-Bold;
+    line-height: 1.2;
+    color: #1E2E2E;
+    text-align: center;
+    margin-bottom: 35px;
+    margin-bottom: 25px;
+    font-size: 2rem;
+  }
+  .header .navbar-nav .nav-item .form {
+    width: 100%;
+    left: 0px;
+    bottom: 0;
+    top: 55px;
+    right: 0;
+    height: 70px;
+  }
+  .header .navbar-nav .nav-item.show .close {
+    float: left;
+  }
+  .social-iocns {
+    gap: 10px;
+    padding: 10px 5px;
+  }
+  .social-iocns .social-links .fa-brands {
+    font-size: 1.25rem;
+  }
+  .hero-heading {
+    padding: 100px 0 20px;
+  }
+  .hero-heading > .img-fluid {
+    top: -20px;
+    right: -150px;
+    width: 100%;
+  }
+  .hero-heading .heading_sec .head-title {
+    font-size: 2.5rem;
+  }
+  .hero-heading .bg-img {
+    margin-top: 50px;
+  }
+  .hero-heading .bg-img .img-fluid {
+    width: 100%;
+  }
+  .hero-heading .bg-img .overlay-content .sec {
+    padding: 5px 25px;
+  }
+  .hero-heading .bg-img .overlay-content .sec .link {
+    width: 40px;
+    height: 40px;
+  }
+  .hero-heading .bg-img .overlay-content .sec .link .fa-brands {
+    font-size: 1.125rem;
+  }
+  .hero-heading .bg-img .overlay-content .sec.quick {
+    right: 50px;
+    bottom: -90px;
+  }
+  .hero-heading .bg-img .overlay-content .sec.app-btn {
+    left: -25px;
+    top: -100px;
+  }
+  .choose {
+    padding: 20px 0;
+  }
+  .choose .heading_sec {
+    padding-left: 16px;
+    margin-bottom: 30px;
+  }
+  .choose .circle-card .card {
+    border-radius: 30px;
+  }
+  .choose .circle-card .card .card-img-overlay {
+    padding: 15px;
+  }
+  .choose .circle-card .card .card-img-overlay .row {
+    gap: 15px;
+  }
+  .choose .circle-card .card .card-img-overlay .sec {
+    overflow: auto;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .circle {
+    width: 90px;
+    height: 90px;
+    margin-right: 35px;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .circle-content {
+    width: 110px;
+    margin: 13px 22px;
+    padding: 5px;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .circle-content .content-title {
+    font-size: 1.625rem;
+    margin-bottom: 5px;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .circle-content .sub-title {
+    font-size: 1rem;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .info {
+    line-height: 1.5;
+    font-size: .875em;
+    margin: 0 0 0 20px;
+  }
+  .food-product .product-details .detail-heading {
+    font-size: 1.375rem;
+    margin-bottom: 15px;
+  }
+  .food-product .product-details .detail-text {
+    font-size: .9rem;
+  }
+  .food-product .product-details .list {
+    margin-bottom: 30px;
+  }
+  .food-product .product-details .list-item {
+    font-size: .75rem;
+  }
+  .customer-slider > .img-fluid {
+    width: 100%;
+    top: 30px;
+    left: -150px;
+  }
+  .customer-slider .heading_sec {
+    margin-bottom: 70px;
+  }
+  .customer-slider .carousel .card {
+    margin: 0 5px;
+  }
+  .customer-slider .carousel .card .quote img {
+    width: 60%;
+  }
+  .customer-slider .carousel .card .profile {
+    width: 100px;
+    height: 100px;
+    margin: -60px auto 20px;
+  }
+  .customer-slider .carousel .card-body {
+    width: 95%;
+  }
+  .customer-slider .carousel .card-body .card-text {
+    font-size: .875rem;
+  }
+  .customer-slider .carousel .card-body .card-title {
+    font-size: 1.25rem;
+  }
+  .customer-slider .carousel .slick-next {
+    right: 35px;
+  }
+  .customer-slider .carousel .slick-prev {
+    left: 35px;
+  }
+  .footer .block .call {
+    margin-top: 15px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .sub-heading {
+    font-size: 2.625rem;
+    font-family: SourceSansPro-Bold;
+    line-height: 1.2;
+    color: #1E2E2E;
+    text-align: center;
+    margin-bottom: 35px;
+    margin-bottom: 25px;
+    font-size: 1.625rem;
+  }
+  .hero-heading {
+    padding: 100px 0 20px;
+  }
+  .hero-heading > .img-fluid {
+    top: -20px;
+    right: -150px;
+    width: 100%;
+  }
+  .hero-heading .heading_sec .head-title {
+    font-size: 2rem;
+  }
+  .hero-heading .heading_sec .head-text {
+    font-size: .875rem;
+  }
+  .hero-heading .heading_sec .btn {
+    font-size: .875rem;
+    padding: 8px 25px;
+  }
+  .hero-heading .heading_sec .btn .fa-brands {
+    font-size: .75rem;
+  }
+  .hero-heading .bg-img {
+    margin-top: 50px;
+  }
+  .hero-heading .bg-img .img-fluid {
+    width: 100%;
+  }
+  .hero-heading .bg-img .overlay-content .sec {
+    padding: 5px 20px;
+  }
+  .hero-heading .bg-img .overlay-content .sec .title {
+    font-size: .875rem;
+  }
+  .hero-heading .bg-img .overlay-content .sec .link {
+    width: 35px;
+    height: 35px;
+  }
+  .hero-heading .bg-img .overlay-content .sec .link .fa-brands {
+    font-size: 1rem;
+  }
+  .hero-heading .bg-img .overlay-content .sec.quick {
+    right: 20px;
+    bottom: -50px;
+  }
+  .hero-heading .bg-img .overlay-content .sec.app-btn {
+    left: -25px;
+    top: -100px;
+  }
+  .choose .heading_sec .info-txt {
+    font-size: .875rem;
+    line-height: 1.5rem;
+  }
+  .food-product .pro-img .card .img-fluid {
+    margin: auto;
+    width: 100%;
+  }
+  .membership .card-body .card-title {
+    font-size: 1.25rem;
+  }
+  .membership .card-body .card-price {
+    font-size: 1.5rem;
+  }
+  .membership .card-body .card-price .fa-solid {
+    font-size: 1.25rem;
+  }
+  .customer-slider > .img-fluid {
+    width: 100%;
+    top: 0px;
+    left: -120px;
+  }
+  .customer-slider .heading_sec {
+    margin-bottom: 50px;
+  }
+  .customer-slider .carousel .card {
+    margin: 0 5px;
+  }
+  .customer-slider .carousel .card .quote {
+    right: 10px;
+    top: 15px;
+  }
+  .customer-slider .carousel .card .quote img {
+    width: 60%;
+  }
+  .customer-slider .carousel .card .profile {
+    width: 80px;
+    height: 80px;
+    margin: -60px auto 20px;
+  }
+  .customer-slider .carousel .card-body {
+    width: 100%;
+    padding: 15px 5px;
+  }
+  .customer-slider .carousel .card-body .card-text {
+    font-size: .75rem;
+  }
+  .customer-slider .carousel .card-body .card-title {
+    font-size: 1.125rem;
+  }
+  .customer-slider .carousel .card-body .sub-title {
+    font-size: .625rem;
+  }
+  .customer-slider .carousel .slick-next {
+    right: 20px;
+    width: 30px;
+    height: 30px;
+  }
+  .customer-slider .carousel .slick-next::before {
+    font-size: .875rem;
+  }
+  .customer-slider .carousel .slick-prev {
+    left: 20px;
+    width: 30px;
+    height: 30px;
+  }
+  .customer-slider .carousel .slick-prev::before {
+    font-size: .875rem;
+  }
+  .footer .block .foot-heading {
+    font-size: 1rem;
+  }
+  .footer .block .list-unstyled .list-item .foot-link {
+    font-size: .875rem;
+  }
+  .footer .block .form {
+    width: 100%;
+  }
+  .footer .block .call .fa-solid {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  .footer .block .icons .social-links {
+    width: 35px;
+    height: 35px;
+  }
+  .footer .block .icons .social-links .fa-brands {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .sub-heading {
+    font-size: 2.625rem;
+    font-family: SourceSansPro-Bold;
+    line-height: 1.2;
+    color: #1E2E2E;
+    text-align: center;
+    margin-bottom: 35px;
+    margin-bottom: 20px;
+    font-size: 1.375rem;
+  }
+  .choose .heading_sec .info-txt {
+    font-size: .875rem;
+    line-height: 1.5rem;
+  }
+  .choose .circle-card .card {
+    border-radius: 20px;
+  }
+  .choose .circle-card .card .card-img-overlay {
+    padding: 10px;
+  }
+  .choose .circle-card .card .card-img-overlay .row {
+    gap: 10px;
+  }
+  .choose .circle-card .card .card-img-overlay .sec {
+    overflow: auto;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .circle {
+    width: 75px;
+    height: 75px;
+    margin-right: 30px;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .circle-content {
+    width: 100px;
+    margin: 10px;
+    padding: 5px;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .circle-content .content-title {
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .circle-content .sub-title {
+    font-size: .875rem;
+    margin-bottom: 0;
+  }
+  .choose .circle-card .card .card-img-overlay .sec .info {
+    line-height: 1.5;
+    font-size: .75em;
+    margin: 0 0 0 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

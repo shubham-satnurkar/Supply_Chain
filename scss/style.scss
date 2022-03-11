@@ -1,6 +1,9 @@
 @import 'variables';
 @import 'mixin';
-// body{background-color: red;}
+
+.sub-heading{
+    @include sub-hedings;
+}
 // Header Section Start
 .header{
     padding: 20px 0;    
@@ -96,9 +99,10 @@
         }
     }
 }
+
 // Hero Heading and Image Section Start
 .hero-heading{
-    overflow: hidden;padding: 80px 0 20px;
+    overflow: hidden;padding: 80px 0 50px;
     position: relative; z-index: 1000;
     &>.img-fluid{display: block;width:65%;
         position: absolute;top: -77px;right: -250px;
@@ -125,7 +129,7 @@
         .img-fluid{
             max-width: 102%;display: block; 
             position: relative;left: 60px;
-            top: -10px; transform: rotate(deg);
+            top: -10px;
         }
         .overlay-content{
             position: absolute; top: 40%;left: 0;
@@ -176,10 +180,9 @@
         width: 50%;top: -200px;
         left: -39%; 
     }
-    .sub-heading{
-        @include sub-hedings;
-    }
+    
     .cards-sec{
+        margin-bottom: 20px;
         .card{
             text-align: center; box-shadow: 0 2px 10px rgba($black, .2);
             padding: 25px 16px; cursor: pointer;
@@ -231,7 +234,7 @@
     .heading_sec{
         padding-left: 105px;
         .sub-heading{
-            @include sub-hedings; text-align: left;
+             text-align: left;
         }
         .info-txt{
             @include para-text; text-align: justify;
@@ -248,12 +251,11 @@
             border-radius: 50px 0 0 50px;border: none;
             .card-img-overlay{
                 @include flexbox; padding: 60px;
-                .row{gap: 40px}
+                .row{gap: 30px}
                 .sec{
                     @include flexbox;flex-direction: row;
                     justify-content: space-between;
-                    row-gap: 50px; flex-wrap: nowrap;
-
+                     flex-wrap: nowrap;
                     .circle{
                         width: 150px;height: 150px;margin-right: 50px;
                         border: 2px solid $white;
@@ -290,7 +292,7 @@
     }
     .heading_sec{
         .sub-heading{
-            @include sub-hedings;line-height: 1.4;
+            line-height: 1.4;
         }
     }
     .pro-img{
@@ -376,7 +378,6 @@
     }
     .heading_sec{
         margin-bottom: 100px;
-        .sub-heading{@include sub-hedings;}
     }
     .carousel{
         .card{
@@ -393,7 +394,7 @@
                 position: absolute;right: 50px;top: 50px;
             }
             &-body{
-                width: 60%; margin: auto;
+                width: 70%; margin: auto;
                 .card-text{
                     font-size: 1rem;color: #333333;
                     line-height: 1.5;
@@ -520,7 +521,7 @@
             }
         }
         
-        .iocns{
+        .icons{
             @include flexbox; justify-content: flex-start;
             gap: 10px;
             .social-links{
@@ -565,3 +566,636 @@
     }
 }
 // Footer Section End
+
+
+// Media Query Start
+// Extra Large Device 
+@media screen and (max-width:1280px){
+    // Hero Heading and Image Section Start
+    .hero-heading{
+        &>.img-fluid{top: -115px;right: -300px;width: 70%;}
+        .bg-img{
+            .img-fluid{
+                width: 100%;left: 30px;
+            }
+            .overlay-content{
+                .sec{
+                    &.quick{right: 10px;}
+                    &.app-btn{left:-20px ;}
+                }
+            } 
+        }
+    } 
+    // Hero Heading and Image Section End
+
+    // Why choose Us Section Start
+    .choose{
+        .heading_sec{padding-left: 70px;}   
+        .circle-card{
+            .card{
+                .card-img-overlay{
+                    padding: 10px 30px;
+                }
+            }
+        }
+    }
+    // Why choose Us Section End
+}
+// Large Device
+@media screen and (max-width:1199px){
+    // Hero Heading and Image Section Start
+    .hero-heading{
+        &>.img-fluid{top: -65px;right: -250px;width: 72%;}
+        .bg-img{
+            .img-fluid{
+                width: 95%;left: 30px;
+            }
+            .overlay-content{
+                .sec{
+                    &.quick{right: 20px;bottom: -95px;}
+                    &.app-btn{left:-20px ;}
+                }
+            } 
+        }
+    } 
+    // Hero Heading and Image Section End
+}
+// Medium Device
+@media screen and (max-width:1080px){
+    // Hero Heading and Image Section Start
+    .hero-heading{
+        &>.img-fluid{top: -90px;right: -200px;width: 75%;}
+        .bg-img{
+            .img-fluid{
+                width: 95%;left: 30px;
+            }
+            .overlay-content{
+                .sec{
+                    &.quick{right: 10px;}
+                    &.app-btn{left:-20px ;}
+                }
+            } 
+        }
+    } 
+    // Hero Heading and Image Section End
+
+    // Why choose Us Section Start
+    .choose{
+        .heading_sec{padding-left: 16px;}
+        .circle-card{
+            .card{
+                .card-img-overlay{
+                    .sec{
+                        .circle{
+                            width: 130px;height: 130px;margin-right: 35px;
+                            &-content{
+                                width: 135px; margin: 25px;
+                                padding: 5px;
+                                .content-title{font-size: 2.5rem;}
+                                .sub-title{font-size: 1.125rem;font-family: $sans-regular}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // Why choose Us Section End
+
+    // Our Happy Customer SEction Start
+    .customer-slider{
+        .carousel{
+            .card{
+                &-body{ width: 90%;}
+            }
+        }
+    }
+    // Our Happy Customer SEction End
+}
+// Tablet Device
+@media screen and (max-width:991px){
+    .sub-heading{
+        @include sub-hedings;margin-bottom: 20px;
+    }
+
+    // Header Section Start
+    .header{
+        .navbar{
+            &-nav{
+                .nav-item{
+                    .form{
+                        left: 100px;bottom: 0;
+                        top: 55px;right: 0;height: 70px;
+                    }
+                    &.show{
+                        .close{float: left;}
+                    }
+                }
+            }
+        }
+    }
+    // Header Section End
+
+    // Hero Heading and Image Section Start
+    .hero-heading{
+        &>.img-fluid{top: -70px;right: -250px;width: 70%;}
+        .heading_sec{
+            .head-title{font-size: 3.5rem;}
+        }
+        .bg-img{
+            .img-fluid{
+                width: 110%;left: 10px;
+            }
+            .overlay-content{
+                .sec{
+                    padding: 5px 25px;
+                    .link{
+                        width: 40px;height: 40px;
+                        .fa-brands{font-size: 1.125rem;}
+                    }
+                    &.quick{right: 15px;bottom: -60px;}
+                    &.app-btn{left:-50px ;}
+                }
+            } 
+        }
+    } 
+    // Hero Heading and Image Section End
+
+    // Why choose Us Section Start
+    .choose{
+        .heading_sec{ padding-left: 16px;}
+        .circle-card{
+            .card{
+                .card-img-overlay{
+                    .row{gap: 20px;}
+                    .sec{
+                        .circle{
+                            width: 105px;height: 105px;margin-right: 35px;
+                            &-content{
+                                width: 110px; margin: 14px;
+                                padding: 5px;
+                                .content-title{font-size: 2rem;margin-bottom: 0;}
+                                .sub-title{font-size: 1rem;}
+                            }
+                        }
+                        .info{
+                            line-height: 1.4;font-size: .875rem;
+                            margin: 0 0 0 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // Why choose Us Section End
+
+    // Our Happy Customer SEction Start
+    .customer-slider{
+        padding: 50px 0;
+        &>.img-fluid{
+            width: 75%;
+        }
+        .carousel{
+            .card{
+                .quote{
+                    img{width: 77%;}
+                }
+                .profile{
+                    width: 130px;height: 130px;
+                    margin:-80px auto 20px;
+                }
+                &-body{ width: 95%;}
+            }
+        }
+    }
+    // Our Happy Customer SEction End
+
+
+}
+// Big Screen Mobile
+@media screen and (max-width:767px){
+    .sub-heading{
+        @include sub-hedings;margin-bottom: 25px;
+        font-size: 2.25rem;
+    }
+
+    // Hero Heading and Image Section Start
+    .hero-heading{
+        padding: 100px 0 20px;
+        &>.img-fluid{top: -30px;right: -220px;width: 100%;}
+        .heading_sec{
+            .head-title{font-size: 3rem;}
+        }
+        .bg-img{ 
+            .img-fluid{
+                width: 80%;left: 0px;margin: auto;
+            }
+            .overlay-content{
+                .sec{
+                    padding: 5px 25px;
+                    .link{
+                        width: 40px;height: 40px;
+                        .fa-brands{font-size: 1.125rem;}
+                    }
+                    &.quick{right: 100px;bottom: -90px;}
+                    &.app-btn{left:20px ;}
+                }
+            } 
+        }
+    } 
+    // Hero Heading and Image Section End
+
+    // How We Work Section Start
+    .work{
+        padding: 20px 0;
+    }
+    // How We Work Section End
+    
+
+    // Why choose Us Section Start
+    .choose{
+        padding: 20px 0; overflow-x: hidden;
+        .heading_sec{ padding-left: 16px;margin-bottom: 30px;}
+        .circle-card{
+            .card{
+                border-radius: 30px;
+                .card-img-overlay{
+                    padding: 15px 30px;
+                    .row{gap: 25px;}
+                    .sec{
+                        .circle{
+                            width: 130px;height: 130px;margin-right: 35px;
+                            &-content{
+                                width: 130px; margin: 24px;
+                                padding: 5px;
+                                .content-title{font-size: 2.375rem;margin-bottom: 5px;}
+                                .sub-title{font-size: 1.125rem;}
+                            }
+                        }
+                        .info{
+                            line-height: 1.5;font-size: .9rem;
+                            margin: 0 0 0 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // Why choose Us Section End
+
+    // Food Product Section Start
+    .food-product{
+        padding: 30px 0;
+        .pro-img{
+            .card{
+                .img-fluid{margin: auto;}
+            }
+        }
+    }
+    // Food Product Section End
+
+    // Our Happy Customer SEction Start
+    .customer-slider{
+        &>.img-fluid{
+            width: 100%;top: 30px;
+        }
+        .heading_sec{margin-bottom: 70px;}
+        .carousel{
+            .card{
+                .quote{
+                    img{width: 77%;}
+                }
+                .profile{
+                    width: 130px;height: 130px;
+                    margin:-80px auto 20px;
+                }
+                &-body{ width: 95%;}
+            }
+        }
+    }
+    // Our Happy Customer SEction End
+}
+// Small Screen Mobile
+@media screen and (max-width:575px){
+    .sub-heading{
+        @include sub-hedings;margin-bottom: 25px;
+        font-size: 2rem;
+    }
+
+    // Header Section Start
+    .header{
+        .navbar{
+            &-nav{
+                .nav-item{
+                    .form{
+                        width: 100%;
+                        left: 0px;bottom: 0;
+                        top: 55px;right: 0;height: 70px;
+                    }
+                    &.show{
+                        .close{float: left;}
+                    }
+                }
+            }
+        }
+    }
+    // Header Section End
+
+    // Left Side Sodial Icons
+    .social-iocns{
+        gap: 10px; padding: 10px 5px;
+        .social-links{
+            .fa-brands{font-size: 1.25rem;}
+        }
+    }
+
+    // Hero Heading and Image Section Start
+    .hero-heading{
+        padding: 100px 0 20px;
+        &>.img-fluid{top: -20px;right: -150px;width: 100%;}
+        .heading_sec{
+            .head-title{font-size: 2.5rem;}
+        }
+        .bg-img{ 
+            margin-top: 50px;
+            .img-fluid{
+                width: 100%;
+            }
+            .overlay-content{
+                .sec{
+                    padding: 5px 25px;
+                    .link{
+                        width: 40px;height: 40px;
+                        .fa-brands{font-size: 1.125rem;}
+                    }
+                    &.quick{right: 50px;bottom: -90px;}
+                    &.app-btn{left:-25px;top: -100px;}
+                }
+            } 
+        }
+    } 
+    // Hero Heading and Image Section End
+
+    // Why choose Us Section Start
+    .choose{
+        padding: 20px 0;
+        .heading_sec{ padding-left: 16px;margin-bottom: 30px;}
+        .circle-card{
+            .card{
+                border-radius: 30px;
+                .card-img-overlay{
+                    padding: 15px;
+                    .row{gap: 15px;}
+                    .sec{overflow: auto;
+                        .circle{
+                            width: 90px;height: 90px;margin-right: 35px;
+                            &-content{
+                                width: 110px; margin:13px 22px;
+                                padding: 5px;
+                                .content-title{font-size: 1.625rem;margin-bottom: 5px;}
+                                .sub-title{font-size: 1rem;}
+                            }
+                        }
+                        .info{
+                            line-height: 1.5;font-size: .875em;
+                            margin: 0 0 0 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // Why choose Us Section End
+
+    // Food Product Section Start
+    .food-product{
+        .product-details{
+            .detail-heading{font-size: 1.375rem;margin-bottom: 15px;}
+            .detail-text{font-size: .9rem;}
+
+            .list{
+                margin-bottom: 30px;
+               &-item{font-size: .75rem;}
+            }
+            
+        }
+    }
+    // Food Product Section End
+
+    // Our Happy Customer SEction Start
+    .customer-slider{
+        &>.img-fluid{
+            width: 100%;top: 30px;left: -150px;
+        }
+        .heading_sec{margin-bottom: 70px;}
+        .carousel{
+            .card{
+                margin: 0 5px;
+                .quote{
+                    img{width: 60%;}
+                }
+                .profile{
+                    width: 100px;height: 100px;
+                    margin:-60px auto 20px;
+                }
+                &-body{ width: 95%;
+                    .card-text{font-size: .875rem;}
+                    .card-title{font-size: 1.25rem;}
+                }
+            }
+
+            .slick-next{right: 35px;}
+            .slick-prev{left: 35px;}
+        }
+    }
+    // Our Happy Customer SEction End
+
+    // Footer Section Start
+    .footer{
+        .block{
+            .call{
+               margin-top: 15px;justify-content: flex-start;
+            }
+        }
+    }
+    // Footer Section End
+}
+// Extra Small Mobile Device
+@media screen and (max-width:425px){
+    .sub-heading{
+        @include sub-hedings;margin-bottom: 25px;
+        font-size: 1.625rem;
+    }
+
+    // Hero Heading and Image Section Start
+    .hero-heading{
+        padding: 100px 0 20px;
+        &>.img-fluid{top: -20px;right: -150px;width: 100%;}
+        .heading_sec{
+            .head-title{font-size: 2rem;}
+            .head-text{font-size: .875rem;}
+            .btn{
+                font-size: .875rem; padding: 8px 25px;
+                .fa-brands{font-size: .75rem;}
+            }
+        }
+        .bg-img{ 
+            margin-top: 50px;
+            .img-fluid{
+                width: 100%;
+            }
+            .overlay-content{
+                .sec{
+                    padding: 5px 20px;
+                    .title{font-size: .875rem;}
+                    .link{
+                        width: 35px;height: 35px;
+                        .fa-brands{font-size: 1rem;}
+                    }
+                    &.quick{right: 20px;bottom: -50px;}
+                    &.app-btn{left:-25px;top: -100px;}
+                }
+            } 
+        }
+    } 
+    // Hero Heading and Image Section End
+
+    // Why choose Us Section Start
+    .choose{
+        .heading_sec{
+            .info-txt{
+                font-size: .875rem;line-height: 1.5rem;
+            }
+        }
+    }
+    // Why choose Us Section End
+
+    // Food Product Section Start
+    .food-product{
+        .pro-img{
+            .card{
+                .img-fluid{margin: auto;width: 100%;}
+            }
+        }
+    }
+    // Food Product Section End
+
+    // Membership Card Section Start
+    .membership{
+        .card{
+            &-body{
+                .card-title{font-size: 1.25rem;}
+                .card-price{
+                    font-size: 1.5rem;
+                    .fa-solid{font-size: 1.25rem;}
+                }
+            }
+        }
+    }
+    // Membership Card Section End
+
+    // Our Happy Customer SEction Start
+    .customer-slider{
+        &>.img-fluid{
+            width: 100%;top: 0px;left: -120px;
+        }
+        .heading_sec{margin-bottom: 50px;}
+        .carousel{
+            .card{
+                margin: 0 5px;
+                .quote{
+                    right: 10px;top:15px;
+                    img{width: 60%;}
+                }
+                .profile{
+                    width: 80px;height: 80px;
+                    margin:-60px auto 20px;
+                }
+                &-body{ width: 100%;
+                    padding: 15px 5px;
+                    .card-text{font-size: .75rem;}
+                    .card-title{font-size: 1.125rem;}
+                    .sub-title{font-size: .625rem;}
+                }
+            }
+
+            .slick-next{
+                right: 20px; width: 30px;height: 30px;
+                &::before{font-size: .875rem;}
+            }
+            .slick-prev{
+                left: 20px; width: 30px;height: 30px;
+                &::before{font-size: .875rem;}
+            }
+        }
+    }
+    // Our Happy Customer SEction End
+
+    // Footer Section Start
+    .footer{
+        .block{
+            .foot-heading{font-size: 1rem;}
+            .list-unstyled{
+                .list-item{
+                    .foot-link{font-size: .875rem;}
+                }
+            }
+            .form{
+                width: 100%;
+            }
+            .call{
+                .fa-solid{font-size: 1rem;padding: 10px;}
+            }
+            .icons{
+                .social-links{
+                    width: 35px; height: 35px;
+                    .fa-brands{font-size: 1rem;}
+                }
+            }
+        }
+    }
+    // Footer Section End
+
+}
+
+@media screen and (max-width:375px){
+    .sub-heading{
+        @include sub-hedings;margin-bottom: 20px;
+        font-size: 1.375rem;
+    }
+    
+    // Why choose Us Section Start
+    .choose{
+        .heading_sec{
+            .info-txt{
+                font-size: .875rem;line-height: 1.5rem;
+            }
+        }
+        .circle-card{
+            .card{
+                border-radius: 20px;
+                .card-img-overlay{
+                    padding: 10px;
+                    .row{gap: 10px;}
+                    .sec{overflow: auto;
+                        .circle{
+                            width: 75px;height: 75px;margin-right: 30px;
+                            &-content{
+                                width: 100px; margin:10px;
+                                padding: 5px;
+                                .content-title{font-size: 1.25rem;margin-bottom: 5px;}
+                                .sub-title{font-size: .875rem;margin-bottom: 0;}
+                            }
+                        }
+                        .info{
+                            line-height: 1.5;font-size: .75em;
+                            margin: 0 0 0 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    // Why choose Us Section End
+}   
