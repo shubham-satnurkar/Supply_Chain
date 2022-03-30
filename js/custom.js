@@ -103,6 +103,7 @@ $(document).ready(function () {
 
 
 // Subscribe Form Validation
+let $subscribe = $("#subscribe");
 let emailNode= $("#email");
 let subBtn = $("#sub-btn")
 let errorNode = $("#error");
@@ -139,3 +140,7 @@ function validateForm(){
     return st1;
     
 }
+
+$subscribe.submit(function(){
+    return validateForm();
+})
